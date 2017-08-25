@@ -8,7 +8,7 @@ import com.seadowg.dave.http.Server
 class MarcoPoloAction : ActionHandler {
     override fun handle(request: Request): Response {
         return when (request.params["speech"]) {
-            "marco" -> Response("Polo!", emptyList())
+            "marco" -> Response("Polo!")
             else -> Response("", emptyList())
         }
     }
@@ -16,7 +16,7 @@ class MarcoPoloAction : ActionHandler {
 
 class FallbackAction : ActionHandler {
     override fun handle(request: Request): Response {
-        return Response("I'm not sure that's part of the game...", emptyList())
+        return Response("I'm not sure that's part of the game...")
     }
 }
 
